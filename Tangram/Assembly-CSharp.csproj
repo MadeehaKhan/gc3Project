@@ -53,30 +53,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ScriptLing\Backdrop.cs" />
      <Compile Include="Assets\ScriptLing\background.cs" />
      <Compile Include="Assets\ScriptLing\Data.cs" />
      <Compile Include="Assets\ScriptLing\DragController.cs" />
      <Compile Include="Assets\ScriptLing\Draggable.cs" />
      <Compile Include="Assets\ScriptLing\Fader.cs" />
+     <Compile Include="Assets\ScriptLing\LoadSceneOnClick.cs" />
      <Compile Include="Assets\ScriptLing\Piece.cs" />
      <Compile Include="Assets\ScriptLing\PieceSet.cs" />
      <Compile Include="Assets\ScriptLing\PolygonRenderer.cs" />
      <Compile Include="Assets\ScriptLing\Puzzle.cs" />
      <Compile Include="Assets\ScriptLing\TangramsSupervisor.cs" />
-     <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
-     <Compile Include="Assets\Scripts\ApplicationManager.cs" />
-     <Compile Include="Assets\Scripts\ChangeColor.cs" />
-     <Compile Include="Assets\Scripts\DragMe.cs" />
-     <Compile Include="Assets\Scripts\DragPanel.cs" />
-     <Compile Include="Assets\Scripts\DropMe.cs" />
-     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
-     <Compile Include="Assets\Scripts\PanelManager.cs" />
-     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
-     <Compile Include="Assets\Scripts\ResizePanel.cs" />
-     <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
-     <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
-     <Compile Include="Assets\Scripts\TiltWindow.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials\ROund\License - READ THIS.txt" />

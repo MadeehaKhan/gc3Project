@@ -224,7 +224,7 @@ MonoBehaviour:
     type: 3}
   puzzleSections:
   - {fileID: 2896997437667379838}
-  PuzzleName: 
+  PuzzleName: c
 --- !u!60 &2896997437667379838
 PolygonCollider2D:
   m_ObjectHideFlags: 0

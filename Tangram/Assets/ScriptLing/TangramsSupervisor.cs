@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 public class TangramsSupervisor : MonoBehaviour {
 
     public List<GameObject> puzzlePrefabs;
-    public GameObject star;
-    public List<GameObject> BackdropPrefabs;
+    public Fader star;
     DragController dragController;
 
     static TangramsSupervisor instance;
     int currentPuzzleIndex = 0;
     GameObject currentPuzzle;
-    Backdrop currentBackdrop;
+    
 
     void Awake(){
         instance = this;
@@ -32,7 +31,6 @@ public class TangramsSupervisor : MonoBehaviour {
 
 	void Start () {
         dragController = GetComponent<DragController>();
-		star.SetActive(false);
 		LoadPuzzle(0);
 	}               
 		
@@ -49,6 +47,7 @@ public class TangramsSupervisor : MonoBehaviour {
                     {
                         currentPuzzleIndex++;
                         LoadPuzzle(currentPuzzleIndex);
+
                     }
 					else if (currentPuzzleIndex + 1 == puzzlePrefabs.Count)
 					{
@@ -63,7 +62,12 @@ public class TangramsSupervisor : MonoBehaviour {
                     {
                         currentPuzzleIndex--;
                         LoadPuzzle(currentPuzzleIndex);
+
                     }
+					else if (currentPuzzleIndex == 0)
+					{
+						SceneManager.LoadScene(0);
+					}
                 }
 
             }
@@ -76,29 +80,15 @@ public class TangramsSupervisor : MonoBehaviour {
         var prefab = puzzlePrefabs [index];
         currentPuzzle = Instantiate(prefab);
         var puzzle = currentPuzzle.GetComponentInChildren<Puzzle>();
-        SetBackdrop(index);
         SetSolved(puzzle);
+	
     }       
 
     public void SetSolved(Puzzle puzzle){
         var data = Data.GetInstance();
         var wasEverSolved = data.GetSolved(puzzle.PuzzleName);
-		star.SetActive(true);
-        currentBackdrop.IsSolved = puzzle.IsSolved;
+		star.IsVisible = wasEverSolved;
+       
     }
 
-    void SetBackdrop(int index){
-        if (currentBackdrop != null)
-        {
-            Destroy(currentBackdrop.gameObject);
-        }
-        currentBackdrop = Instantiate(BackdropPrefabs [index]).GetComponent<Backdrop>();
-    }
-
-//    void ResetPieces(){
-//        foreach (var piece in pieces)
-//        {
-//            piece.Reset();
-//        }
-//    }
 }
