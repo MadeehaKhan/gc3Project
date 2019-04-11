@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4541245022019732337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.99, y: -2.22, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -142,9 +142,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.465, y: 0.39999998}
-      - {x: -0.465, y: -0.39999998}
-      - {x: 0.465, y: -0.39999998}
-      - {x: 0.465, y: 0.39999998}
+      - {x: -0.46109232, y: -0.3863233}
+      - {x: 0.4493701, y: -0.38845047}
+      - {x: 0.45433235, y: 0.39999995}
 --- !u!114 &1859318307251636145
 MonoBehaviour:
   m_ObjectHideFlags: 0
